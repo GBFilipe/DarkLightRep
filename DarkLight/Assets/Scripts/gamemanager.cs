@@ -1,9 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class gamemanager : MonoBehaviour
 {
+    public TextMeshProUGUI gameOver;
+    public Button RestartButton;
+    public Button QuitButton;
+    public bool isGameActive;
+    
+    
+    
+    
     public Tile middle;
     public Tile right;
     public Tile left;
@@ -21,6 +32,23 @@ public class gamemanager : MonoBehaviour
     {
         
     }
+
+    
+    public void GameOver()
+    {
+        RestartButton.gameObject.SetActive(true);
+        gameOver.gameObject.SetActive(true);
+        isGameActive = false;
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+
+
+
     void ChangeTiles()
     {
         
