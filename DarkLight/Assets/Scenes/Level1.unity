@@ -222,7 +222,7 @@ Transform:
   m_GameObject: {fileID: 213568826}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.17, y: 5.23, z: 0.28}
+  m_LocalPosition: {x: 8.77, y: 5.23, z: 0.28}
   m_LocalScale: {x: 0.43224362, y: 25.860527, z: 4.143744}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -503,6 +503,7 @@ MonoBehaviour:
   middle: {fileID: 818038831}
   right: {fileID: 2083031319}
   left: {fileID: 906787880}
+  up: {fileID: 0}
   WhiteTile: 0
 --- !u!4 &413039392
 Transform:
@@ -896,7 +897,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -942,7 +943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2057675419306015858, guid: 7327f6a50167ca644ad40c0c85c81b27, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.56
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 2057675419306015858, guid: 7327f6a50167ca644ad40c0c85c81b27, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1088,7 +1089,19 @@ MonoBehaviour:
   Clock: {fileID: 1394868468}
   OnTimerEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 102900000, guid: dbd10f3515a064246aaa70aef89eb22f, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1336793381
 Transform:
   m_ObjectHideFlags: 0
@@ -1203,7 +1216,7 @@ Transform:
   m_GameObject: {fileID: 1361540941}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.8, y: 5.23, z: 0.28}
+  m_LocalPosition: {x: -8.66, y: 5.23, z: 0.28}
   m_LocalScale: {x: 0.43224362, y: 25.860527, z: 4.143744}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1302,7 +1315,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2057675419306015858, guid: 7327f6a50167ca644ad40c0c85c81b27, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.56
+      value: 0.79
       objectReference: {fileID: 0}
     - target: {fileID: 2057675419306015858, guid: 7327f6a50167ca644ad40c0c85c81b27, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1447,7 +1460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2057675419306015858, guid: 7327f6a50167ca644ad40c0c85c81b27, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.56
+      value: 0.78
       objectReference: {fileID: 0}
     - target: {fileID: 2057675419306015858, guid: 7327f6a50167ca644ad40c0c85c81b27, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1849,7 +1862,7 @@ Transform:
   m_GameObject: {fileID: 2036213260}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.83, z: 0}
+  m_LocalPosition: {x: -0.17, y: 2.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

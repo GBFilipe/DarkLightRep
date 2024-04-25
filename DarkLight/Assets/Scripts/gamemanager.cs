@@ -18,6 +18,7 @@ public class gamemanager : MonoBehaviour
     public Tile middle;
     public Tile right;
     public Tile left;
+    public Tile up;
     public int WhiteTile;
     
     // Start is called before the first frame update
@@ -55,19 +56,32 @@ public class gamemanager : MonoBehaviour
         switch (WhiteTile) 
         {
             case 1:
+                
                 middle.Black();
                 right.Black();
                 left.White();
-                     break;
+                up.Black();
+                break;
             case 2:
+                
                 middle.White();
                 right.Black();
                 left.Black();
+                up.Black();
                 break;
             case 3:
+                
                 middle.Black();
                 right.White();
                 left.Black();
+                up.Black();
+                break;
+            case 4:
+                
+                middle.Black();
+                right.Black();
+                left.Black();
+                up.White();
                 break;
         }
     
@@ -94,6 +108,12 @@ public class gamemanager : MonoBehaviour
             case 3:
                 
                 right.StartCoroutine("ChangeColor");
+
+                break;
+
+            case 4:
+
+                up.StartCoroutine("ChangeColor");
 
                 break;
         }

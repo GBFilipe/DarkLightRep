@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using System.Threading;
 using Unity.VisualScripting;
 
@@ -37,13 +38,20 @@ public class Timer : MonoBehaviour
             {
                 if (TimeLeft <= 0)
                 {
-                    OnTimerEnd.Invoke();
+                    ChangeScene();
                 }
             }
 
         }
     }
 
+    void ChangeScene()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+      
+    
+    
     void UpdateTimerText(float currentTime)
     {
         currentTime += 1;
