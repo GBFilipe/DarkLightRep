@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using System.Threading;
+using Unity.VisualScripting;
 
 public class Timer : MonoBehaviour
 {
@@ -11,7 +13,9 @@ public class Timer : MonoBehaviour
     public bool TimerOn = false;
 
     public Text Clock;
-    
+
+    public UnityEvent OnTimerEnd;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,25 +31,27 @@ public class Timer : MonoBehaviour
             if (TimeLeft > 0)
             {
                 TimeLeft -= Time.deltaTime;
-                updateTimer(TimeLeft);
+                UpdateTimerText(TimeLeft);
             }
             else
             {
-                Debug.Log("Time is up");
-                TimeLeft = 0;
-                TimerOn = false;
+                if (TimeLeft <= 0)
+                {
+                    OnTimerEnd.Invoke();
+                }
             }
-        
+
         }
     }
-    
-    void updateTimer(float currentTime)
+
+    void UpdateTimerText(float currentTime)
     {
         currentTime += 1;
-
-        float minutes = Mathf.Floor(currentTime / 60);
-        float seconds = Mathf.Floor(currentTime % 60);
-    
-        Clock.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+        
+        float minutes = Mathf.FloorToInt(currentTime / 60);
+        float seconds = Mathf.FloorToInt(currentTime % 60);
+        
+        Clock.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        
     }
 }

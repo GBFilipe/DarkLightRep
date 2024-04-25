@@ -1083,9 +1083,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39b95eede990c7a48952b607246fb932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLeft: 80
-  TimerOn: 0
+  TimeLeft: 60
+  TimerOn: 1
   Clock: {fileID: 1394868468}
+  OnTimerEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1336793381
 Transform:
   m_ObjectHideFlags: 0
