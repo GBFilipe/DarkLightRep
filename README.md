@@ -22,8 +22,6 @@ script was a little rough but almost complete.
 
 I then decided to focus on making the title screen.
 
-Following this I made another level to keep the game going.
-
 Game was looking good mostly everything worked the way it was supposed to.
 
 Still trying to figure out some bugs. 
