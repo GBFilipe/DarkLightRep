@@ -24,7 +24,7 @@ public class PlayerLife : MonoBehaviour
         }
     }
 
-
+    // Respawning
 
     void Die()
     {

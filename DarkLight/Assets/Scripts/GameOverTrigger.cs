@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -23,23 +24,25 @@ public class GameOverTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        
+    
     }
 
     
     private void OnTriggerEnter(Collider other)
     {
-
-        if (!isGameOver)
+     
+        if (!isGameOver) 
         {
+            SceneManager.LoadScene("GameOver");
 
-            
             if (gameOver != null)
             {
                 gameOver.gameObject.SetActive(true);
+
             }
 
             // Activate Quit and Restart Buttons
+           
             if (QuitButton != null)
             {
                 QuitButton.gameObject.SetActive(true);
@@ -48,6 +51,7 @@ public class GameOverTrigger : MonoBehaviour
             if (RestartButton != null)
             {
                 RestartButton.gameObject.SetActive(true);
+
             }
 
         }
@@ -60,12 +64,6 @@ public class GameOverTrigger : MonoBehaviour
 
     public void RestartGame()
     {
-
-        if (isGameOver == true)
-        {
-            Time.timeScale = 0f;
-        }
-
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
 
     }

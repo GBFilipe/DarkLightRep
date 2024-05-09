@@ -6,6 +6,7 @@ using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using System.Threading;
 using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 
 public class Timer : MonoBehaviour
 {
@@ -40,17 +41,17 @@ public class Timer : MonoBehaviour
                 {
                     ChangeScene();
                 }
-            }
-
+            }       
+            
         }
     }
 
+  // Going from level 1 to Win Screen
+    
     void ChangeScene()
     {
-        SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene("WinScreen");
     }
-      
-    
     
     void UpdateTimerText(float currentTime)
     {

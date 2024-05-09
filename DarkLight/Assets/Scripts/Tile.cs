@@ -34,6 +34,8 @@ public class Tile : MonoBehaviour
         GetComponent<Renderer>().material = black;
     }
 
+  // Speed in which the tiles change
+    
     public IEnumerator ChangeColor()
     {
         GetComponent<Renderer>().material = red;

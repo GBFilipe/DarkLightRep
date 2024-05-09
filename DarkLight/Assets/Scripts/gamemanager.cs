@@ -24,7 +24,7 @@ public class gamemanager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("ChangeTiles", 2, 2);
+        InvokeRepeating(nameof(ChangeTiles), 2, 2);
         StartCoroutine(FlashRed());
     }
 
@@ -48,7 +48,7 @@ public class gamemanager : MonoBehaviour
     }
 
 
-
+    // Changing the tiles color
 
     void ChangeTiles()
     {

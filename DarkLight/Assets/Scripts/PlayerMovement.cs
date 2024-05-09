@@ -11,8 +11,8 @@ public class PlayerMovement : MonoBehaviour
     //movement public float
     float moveSpeed = 7f;
 
-    //jumping public floats
-    float jumpForce = 7f;
+    //jumping public float
+    float jumpForce = 8f;
 
 
     // Start is called before the first frame update
@@ -24,7 +24,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Move player right to left
+        //Move player right to left and jump
+       
         transform.Translate(Vector3.right * Time.deltaTime * Input.GetAxis("Horizontal") * moveSpeed);
 
 
