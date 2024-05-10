@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     float moveSpeed = 7f;
 
     //jumping public float
-    float jumpForce = 8f;
+    float jumpForce = 7f;
 
 
     // Start is called before the first frame update
