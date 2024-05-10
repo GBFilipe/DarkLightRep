@@ -56,11 +56,11 @@ public class Timer : MonoBehaviour
     void UpdateTimerText(float currentTime)
     {
         currentTime += 1;
-        
+
         float minutes = Mathf.FloorToInt(currentTime / 60);
         float seconds = Mathf.FloorToInt(currentTime % 60);
-        
+
         Clock.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-        
+
     }
 }
