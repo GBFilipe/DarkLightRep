@@ -2,8 +2,6 @@
 
 Learning how to create games is certaintly fun but obviously challenging.
 
-How was I going to tackle this project as a new comer?
-
 First thing to think about was how I wanted to structure this game and what I would do first.
 
 Naturally the thing I was struggling with the most was coding so I decided to deal with that aspect first.
@@ -35,6 +33,10 @@ will continue to work on to find out why
 Game has no sound
 
 music track for game - in progress.
+
+Update : few days later I fixed a few bugs, made music, and there is now a game over and win screen. 
+
+With that the game is finished.
 
 
 
